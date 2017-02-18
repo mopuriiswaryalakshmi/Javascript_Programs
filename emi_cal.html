@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>EMI Calculator</title>
+</head>
+<body>
+
+<div class="row">
+	  <div class="col-md-6">
+</div>
+
+
+<div class="container">
+	<div class="row">
+	  <div class="col-md-6">
+	  
+			<form id="emiCalc" method="post" action="/">
+
+				<p  id="errorMsg"></p>
+
+				<label>FD Amount</label>
+				<input type="text" id="amount" /><br/>
+
+				<label>Interest Rate</label>
+				<input type="text" id="interest" /><br/>
+
+				<label>Number of years</label>
+				<input type="text" id="years" /> <br/>
+				<input type="submit" value = "Calculate Interest" />
+			</form>
+
+			<p>Total Amount : <span id= "total" ></span></p>
+		</div>
+	</div>
+</div>
+
+<script >
+	var amountHandle = document.getElementById('amount');
+	var interestHandle=document.getElementById('interest');
+	var yearsHandle = document.getElementById('years');
+	var totalHandle = document.getElementById('total');
+	var errorMsgHandle = document.getElementById('errorMsg');
+	var formHandle = document.getElementById('emiCalc');
+	var amountValue;
+	var interestValue;
+	var yearsValue;
+	var totalValue;
+
+	amountHandle.onblur = function(){
+		amountValue = amountHandle.value;
+		if(amountValue <= 0){
+			errorMsgHandle.innerHTML = "Amount Should be grater than 0";
+
+		}else{
+			errorMsgHandle.innerHTML = "";
+		}
+
+	};
+
+	interestHandle.onblur = function(){
+		interestValue = interestHandle.value;
+		if(interestValue <= 0){
+			errorMsgHandle.innerHTML= "Interest Should be grater than 0";
+
+		}else{
+			errorMsgHandle.innerHTML = "";
+		}
+	};
+
+	yearsHandle.onblur = function(){
+		yearsValue = yearsHandle.value;
+		if(yearsValue <= 0){
+			errorMsgHandle.innerHTML = "Year Should be grater than 0";
+
+		}else{
+			errorMsgHandle.innerHTML = "";
+		}
+	};
+
+formHandle.onsubmit = function(e){
+   console.log(e);
+	e.preventDefault();
+	if((amountValue !== undefined) && (interestValue !== undefined) && (yearsValue !== undefined)){
+		totalValue = (amountValue * interestValue/100)*yearsValue;
+		totalHandle.innerHTML = totalValue;
+	}
+}
+
+
+</script>
+
+</body>
+</html>

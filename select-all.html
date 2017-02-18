@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select All</title>
+</head>
+<body>
+
+<input type="checkbox" id="selectAll"> Select All<br/>
+
+
+<div id="players">
+<input type="checkbox" id="sachin">Sachin<br/>
+<input type="checkbox" id="virat">Virat<br/>
+<input type="checkbox" id="dhoni">Dhoni<br/>
+</div>
+<br/>
+<input type="checkbox" id="terms">I Accept Terms
+<script>
+
+/*
+	var selectAll = document.getElementById('selectAll');
+	var sachin    = document.getElementById('sachin');
+	var Virat     = document.getElementById('virat');
+	var dhoni     = document.getElementById('dhoni');
+
+	function toSelectAll(){
+		if (selectAll.checked)
+			(sachin && virat && dhoni).checked = true;
+	}
+	*/
+
+
+	var selectAllHandle = document.getElementById('selectAll');
+	var playersHandle	= document.getElementById('players');
+	var playerList      = playersHandle.getElementsByTagName('input');
+
+	selectAllHandle.onclick = function(){
+
+		if(selectAllHandle.checked){
+			for(var i=0;i<playerList.length;i++){
+				playerList[i].checked = true;
+			}
+			}else{
+				for(var i=0;i<playerList.length;i++){
+				playerList[i].checked = false;
+
+			}
+
+		}
+	};
+
+
+
+	
+</script>
+
+
+
+
+</body>
+</html>

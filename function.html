@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function</title>
+</head>
+<body>
+<span id="n1">11</span> <span id="operator">+</span> <span id="n2">9</span>=<span id="result"></span>
+
+<script>
+
+function arthimatic  (n1,n2,operator){
+	if (operator == "+"){
+		return (Number(n1)+Number(n2));
+	}else if(operator == "-"){
+
+	}else{
+
+	}
+
+}
+
+var n1=document.getElementById("n1").innerHTML;
+var operator=document.getElementById("operator").innerHTML;
+var n2=document.getElementById("n2").innerHTML
+var result=document.getElementById("result");
+var value=arthimatic(n1,n2,operator);
+result.innerHTML=value;
+
+
+/*
+	function add(){
+		console.log(10+20);
+	}
+	add(); //used to invoke call
+
+	function sub(n1,n2){
+		console.log(n2-n1);
+		
+	}
+
+	sub(20,10);
+
+	function mul(n1*n2*n3){
+	   console.log(n1*n2*n3);
+    }
+    mul(10,30); //we are passing less no of  arg than def,additional params are not assig values are undefined
+	
+
+	function div(n1,n2){ 
+		console.log(n1/n2); //addi values are rejected by fun
+	}
+	div(20,10,5);
+
+*/
+</script>
+
+</body>
+</html>

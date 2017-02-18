@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object</title>
+</head>
+<body>
+<script >
+	function Restaurent(name,location){
+		this.name = name;
+		this.location = location;
+		this.details = function(){
+			return this.name + " " + this.location;
+		};
+	}
+
+var r1 = new Restaurent("Adigas", "Jp Nager");
+
+	console.log(r1);
+	console.log(r1.details());
+</script>
+</body>
+</html>

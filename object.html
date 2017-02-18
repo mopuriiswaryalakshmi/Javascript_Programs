@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+</head>
+<body>
+<script >
+	//1st way
+	var player = new Object();
+	player.firstname = "ishu";
+	player.lastname = "lakshmi";
+	player.rank = 2;
+	player.team = "Javascript";
+
+	var player1 = new Object();
+	player1.name="nandu";
+	player1.lastname="naidu";
+	player1.team = "Ruby";
+	player1.details = function(){
+
+	};
+
+	console.log(player);
+	console.log(player1);
+
+	//2nd way
+	var restaurent = {};
+	restaurent.name = "Adigas";
+	restaurent.location = "Jayanagar";
+	console.log(restaurent);
+
+	//3rd way
+	var hospital = {
+		"name" : "Sagar Apollo", //it is seperated by coma because it is not a statement, in hash these are seperated by coma, key should be only string, in ruby key is may be anything like number,string..,and defult value in ruby  is null, but here it is not the case, if u not give key it wont consider that key also
+		"location" : "BTM Layout",
+	};
+	console.log(hospital);
+
+
+
+</script>
+
+</body>
+</html>

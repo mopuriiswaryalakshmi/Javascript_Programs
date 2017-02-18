@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arthimatic Operation</title>
+</head>
+<body>
+<p>arthimatic(10,20,"add"):<span id="v1"></span></p>
+<p>arthimatic(20,30,"multiply"):<span id="v2"></span></p>
+<script >
+	function arthimatic(n1,n2,operator){
+		if(operator == 'add'){
+			return n1+n2;
+
+		}else if (operator == 'multiply'){
+			return n1*n2;
+
+		}else{
+			return 'invalid operaror'
+		}
+	}
+
+	var value1=arthimatic(10,20,"add");
+	var value2=arthimatic(20,30,"multiply");
+
+	var v1Handle = document.getElementById("v1");
+	// jquery - $('#v1')
+	var v2Handle = document.getElementById("v2");
+
+	v1Handle.innerHTML = value1;
+	
+	v2Handle.innerHTML = value2;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM HTML</title>
+</head>
+<body>
+
+<h2 id = "intro">important concepts for js developer</h2>
+<h3>What u can do with dom</h3>
+<ul>
+<li>change images on fly</li>
+<li>add css elements on ur webpage</li>
+</ul>
+<script>
+	var introHandle = document.getElementById("intro");
+	introHandle.innerHTML = "Javascript developers need to know";
+	var listitems = document.getElementsByTagName('li'); //returns array of elements
+	console.log(listitems);
+</script>
+</body>
+</html>

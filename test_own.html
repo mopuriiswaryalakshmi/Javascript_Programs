@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<span id="n1">11</span> <span id="operator">+</span> <span id="n2">9</span>=<span id="result"></span>
+</body>
+
+<script >
+//11+9=20
+	n1Handle=document.getElementById('n1').innerHTML;
+	operatorHandle=document.getElementById('operator').innerHTML;
+	n2Handle = document.getElementById('n2').innerHTML;
+	resultHandle = document.getElementById('result');
+	value = arthimatic(n1Handle,n2Handle,operatorHandle)
+	resultHandle.innerHTML = value;
+
+
+	function arthimatic(n1Handle,n2Handle,operatorHandle){
+		if(operatorHandle == "+"){
+			return (Number(n1Handle)+Number(n2Handle));
+		}else if(operatorHandle == "-"){
+			return(Number(n1Handle)-Number(n2Handle));
+		}
+	}
+</script>
+<script>
+	n1Handle=$(document)
+	operatorHandle=$(document)
+	n2Handle = $()
+</script>
+	
+
+
+</html>

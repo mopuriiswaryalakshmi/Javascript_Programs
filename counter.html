@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+<h1 id='counter'></h1>
+<script>
+	var i =10;
+	var counter = document.getElementById('counter');
+
+	function countDown(){
+		if(i >= 1){
+			counter.innerHTML = i;
+			i--;
+
+	}else{
+		counter.innerHTML = "HAPPY NEW YEAR";
+		clearInterval(intervalHandle)
+	}
+}
+	var intervalHandle=setInterval(countDown,1000);
+</script>
+
+</body>
+</html>

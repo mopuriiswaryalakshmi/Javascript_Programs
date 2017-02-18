@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check OnLine</title>
+</head>
+<body>
+<p id="status" align="right">You are online</p>
+<h1 id="heading">Hello World</h1>
+
+</body>
+<script >
+	function checkStatus(){
+		var status = document.getElementById("status");
+		if(navigator.onLine){
+			status.innerHTML = "You are Online";
+		}else{
+			status.innerHTML = "You are Offline";
+		}
+	}
+	setInterval(checkStatus,3000);
+	function changeHeading(){
+		var heading = document.getElementById("heading");
+		heading.innerHTML = "GoodBye World";
+	}
+	setTimeout(changeHeading,2000);
+</script>
+</html>

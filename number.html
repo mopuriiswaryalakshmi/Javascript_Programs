@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number</title>
+</head>
+<body>
+<script>
+	/*var age = prompt("Enter your age");
+	var secondsAlive = age*3600*24*365;
+	var fakeAge = NaN;
+	if (Number.isNaN(secondsAlive)){ //returns true if var value is NaN
+		alert("Enter age in number");
+
+	}else{
+		alert("Your age in seconds" + secondsAlive);
+	}
+*/
+
+console.log(Math.round(10.6));
+console.log(Math.floor(10.7));
+console.log(Math.ceil(10.7));
+console.log(Math.max(10,20,30,40));
+console.log(Math.min(10,20,30,40));
+console.log(Math.round(Math.random()*100));
+console.log(Math.pow(10,2));
+
+
+
+var sentence = prompt("Enter a Sentence");
+var word = prompt("Enter a Word u want");
+string=sentence.split('')
+string.forEach(function(sent){
+	if(sent == word)
+		console.log(sentence.indexOf(word));
+	
+   })
+
+
+
+//Given array 
+var array = [34,15,88,2];
+var min_num = array[0];
+var max_num = array[0];
+array.forEach(function(each_num){
+	if(each_num < min_num){
+	min_num = each_num;
+	
+	}
+	return min_num
+//console.log( "Minimin numeber is" + min_num );
+})
+
+
+/*//Given array 
+var array1 = [34,345,-1,100]
+var min_num = array1[0]
+var max_num = array1[3]
+array1.forEach(function(each_num){
+	if (each_num < min_num){
+	min_num = each_num
+	}else if (each_num > max_num){
+		max_num = each_num
+	}else{
+		" array It should not be empty"
+	}
+
+
+console.log( "Minimin numeber and maximum number is" + min_num );
+})
+
+*///
+var given_array_a = ["1 2 3 4 5"]
+splitted_array = given_array_a.split(" ");
+var min_num1 = splitted_array[0];
+var max_num2 = splitted_array[0];
+splitted_array.forEach(function(num){
+	if(num < min_num1){
+		min_num = num;
+	}
+	 if(num > max_num2){
+		max_num2 = num;
+
+	}
+	//console.log( "Minimin numeber is" + min_num );
+	return min_num + " " + max_num;
+});
+
+//array[1,2,3,45,6789]
+//(123) 456-768
+
+function createphone(value){
+var splitted_array1 = "("+array3.array3.splice(0,3).join('')+")"
+var splitted_array2 = " "+array3.array3.splice(0,3).join('')
+var splitted_array3 = "-"+array3.join('')
+return splitted_array1+splitted_array2+splitted_array3;
+}
+
+var array3 = ["1,2,3,4,5,6,7,8,9,0"];
+var result = createphone(value);
+console.log(result)
+</script>
+</body>
+</html>
+
+<!-- 
+var n1=10
+n1.toString();
+
+Number.isNaN(10 * ab)
+Number.isInteger(123);
+
+Number.
+
+In Ruby
+"string".to_s? string
+10abc it wil give 10
+
+
+
+Math
+
+ -->
+
+
+
+

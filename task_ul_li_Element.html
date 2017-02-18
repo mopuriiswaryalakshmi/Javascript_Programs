@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task-Box Creating Element</title>
+</head>
+<body>
+<h3>Listing My Tasks</h3>
+<ul id="myTask">
+	
+</ul>
+<p id="msg"></p>
+<button id="addTask">Add Task</button>
+<script >
+
+var buttonHandle = document.getElementById('addTask');
+var myTasks = document.getElementsByTagName('li');
+
+if (myTasks.length==0){
+	document.getElementById('msg').innerHTML="NO Tasks Added,Add your first task";
+
+}
+/*
+
+buttonHandle.onclick = function(){
+	var taskHandle= document.getElementById('myTask');
+	var myList = document.createElement('li'); //<li></li>
+	var task = prompt("Enter a Task")
+	if ((task !== null) && (task !== '')){
+		var listName = document.createTextNode('Get Milk');
+		myList.appendChild(listName);
+	    taskHandle.appendChild(myList);
+	    document.getElementById('msg').innerHTML = ""; 
+
+	}
+}; 
+*/
+
+var output =''
+buttonHandle.onclick = function(){
+	var taskHandle= document.getElementById('myTask');
+	output += '<li>' 
+	var task = prompt("Enter a Task");
+	if ((task !== null) && (task !== '')){
+		output += task;
+		output += '</li>'
+		taskHandle.innerHTML = output;
+		console.log(output);
+		document.getElementById('msg').innerHTML = "";
+
+	}
+};
+
+
+
+
+
+
+
+	/*var taskHandle= document.getElementById('myTask');
+	var myList = document.createElement('li'); //<li></li>
+	var listName = document.createTextNode('Get Milk'); // <li> </li>
+	myList.appendChild(listName);
+	taskHandle.appendChild(myList);
+
+	var myList = document.createElement('li');
+	var listName = document.createTextNode('Wash car');
+	myList.appendChild(listName);
+	taskHandle.appendChild(myList); */
+
+</script>
+</body>
+</html>

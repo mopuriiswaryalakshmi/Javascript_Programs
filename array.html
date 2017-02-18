@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+<ol>
+<span id= "schoolList"> </span>
+</ol>
+<script>
+
+
+
+
+/*
+//var mobile = Array();
+var schools=["TEWS","GWE","AUDEN", "BHSS"];
+var boards = new Array(4);
+var ib_boards = ["cambridge","ib"]
+var total = 4;
+console.log(schools);//original
+console.log(schools.reverse());  //reversed
+console.log(schools);  //original
+console.log(schools.join(',')); //joined
+console.log(schools.sort()); // reversed sort
+console.log(Array.isArray(schools)); //whether this class is array or not
+console.log(Array.isArray(total)); 
+boards.fill("cbse"); //4 index strigs store with cbse
+console.log(boards);
+schools.push("TISB"); //push to last index
+console.log(schools);  //original
+
+
+
+schools.unshift("Indus International") //
+console.log(schools);  //original
+console.log(boards.concat(ib_boards)); // last index is added
+console.log(schools);  //original
+console.log(schools.splice(0,3)); // it will remove that from 0 to 2 , 3wont come
+console.log(schools);  //original
+console.log(schools.includes("TISB"));  //original
+console.log(schools.indexOf("APS"));
+*/
+
+
+
+
+var marks = [77,68,40,69,30]
+function select1Class(mark){
+	return mark>60
+
+}
+function select2Class(mark){
+	return (mark>=40 && mark<=60)
+
+}
+
+
+var firstClass=marks.filter(select1Class);
+console.log(firstClass);
+
+var secondClass=marks.filter(select2Class); //find all the values
+console.log(secondClass);
+
+var result=marks.find(select1Class); //find 1st value
+console.log(result);
+
+
+var schools=["TEWS","GWE","AUDEN", "BHSS"];
+for(var i=0; i< schools.length; i++){
+	console.log(schools[i]);
+} 
+
+schools.forEach(function(school){
+	console.log(school);
+
+})
+
+console.log("Total schools" , schools.length) //no coma so property
+
+
+
+var list="";
+schools.forEach(function(school){
+	list += "<li>" + school + "</li>"
+})
+
+var schoolList=document.getElementById("schoolList");
+schoolList.innerHTML = list;
+
+var prices = [125,300,175,100.50]
+var sum = 0
+prices.forEach(function(price){
+	sum = sum+price
+	console.log(sum)
+})
+
+
+
+</script>
+
+</body>
+</html>

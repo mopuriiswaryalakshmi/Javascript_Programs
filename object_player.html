@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ob</title>
+</head>
+<body>
+<script>
+	function Player(){
+		this.name;
+		this.rank;
+		this.score;
+		this.details = function(){
+			return this.name + " " + this.rank + " " + this.score;
+		};
+		this.moveUpRank = function(){
+			if (this.rank === 1){
+				return "Already rank is 1";
+
+			}else{
+				return this.rank -= 1;
+			}
+		};
+	}
+
+	var player = new Player();
+	player.name = "Virat";
+	player.rank = 5;
+	player.score = 10000;
+	player.name = "Virat Kohli"
+	player.team = "RCB"
+
+	console.log(player);
+
+
+	var player1 = new Player();
+	player1.name="Sachin";
+	player1.rank = 1;
+	player1.score = 110000;
+
+	console.log(player);
+	console.log(player.details());
+	console.log(player.moveUpRank());
+	console.log(player.details());
+	//console.log(player1.moveUpRank());
+	//console.log(player1.details());
+
+
+	/*var players = [];
+	players.push(player,player1);
+
+	players.forEach(function(player){
+		console.log(player.name);
+		console.log(player.details());
+	});
+*/
+
+</script>
+</body>
+</html>
